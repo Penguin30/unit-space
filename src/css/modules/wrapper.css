@@ -1,0 +1,4 @@
+.wrapper_example {
+  display: flex; }
+  .wrapper_example h1 {
+    font-size: rem(20); }

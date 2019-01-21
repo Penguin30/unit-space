@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic");
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url("/src/fonts/");
+  src: url("/src/fonts/?#iefix") format("embedded-opentype"), url("/src/fonts/ProximaNova-Bold.woff") format("woff"), url("/src/fonts/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url("ProximaNova-Regular.eot");
+  src: url("ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("ProximaNova-Regular.woff") format("woff"), url("ProximaNova-Regular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url("ProximaNova-Light.eot");
+  src: url("ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("ProximaNova-Light.woff") format("woff"), url("ProximaNova-Light.ttf") format("truetype");
+  font-weight: 300; }
