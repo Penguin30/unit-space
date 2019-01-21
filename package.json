@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anywayscode/anywayscode.github.io.git"
+    "url": "git+https://github.com/Penguin30/unit-space.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anywayscode/anywayscode.github.io/issues"
+    "url": "https://github.com/Penguin30/unit-space/issues"
   },
-  "homepage": "https://github.com/anywayscode/anywayscode.github.io#readme"
+  "homepage": "https://github.com/Penguin30/unit-space#readme"
 }

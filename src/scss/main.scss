@@ -1,8 +1,4 @@
-@import "utils/libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";
-
+@import "utils/vars";@import "utils/fonts";
 html {
   line-height: $mainLineHeight;
 	font-size: $mainFontSize;
@@ -21,27 +17,24 @@ html {
 
 body {
   height: 100%;
+  width: 100%;
   font-family: $mainFont;
-	font-family: $mainFontSize;
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
   background: $neutral-primary;
-  // overflow-x: hidden;
+  overflow: hidden;
+  position: fixed;
 }
-
 *, *:before, *:after { box-sizing: border-box; }
-
 h1, h2, h3, h4, h5, h6 { margin: 0; }
-
 a {
   text-decoration: none;
   color: $mainFontColor;
   text-transform: uppercase;
 }
-
 ul, li {
   list-style-type: none;
   margin: 0;
@@ -65,23 +58,102 @@ ul, li {
   }
 }
 
-@import "modules/header.scss";
+// Content
+header {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 0;
+  padding-top: 30px;
+  width: 100%;
+  z-index: 100;
+  nav {
+      display: flex;
+      justify-content: space-between;
+      ul {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          li {
+              margin: 0px 15px;
+              & .separator {
+                  display: flex;
+                  position: absolute;
+                  top: 50%;
+                  transform: translate(-50%, 50%);
+
+                  width: 37px;
+                  height: 2px;
+                  background-color: $white;
+              }
+          }
+          li:last-child {
+              margin-right: 0px;
+          }
+          a {
+              font-size: $navFontSize;
+              font-weight: 700;
+              &.language {
+                  margin-right: 14px;
+
+                  & .fas {
+                      margin-left: 7px;
+                      opacity: .5;
+                  }
+              }
+              &.menu-toggle {
+                  letter-spacing: 2.4px;
+              }
+          }
+      }
+  }
+}
 
 #first {
   position: relative;
   height: 100%;
   background-size: 100%;
   .background {
+      .planet {
+        position: absolute;
+        background-image: url(../images/planet.png);
+        background-size: 100%;
+        top: 100px;
+        right: 45%;
+        z-index: 6;
+        width: 105px;
+        height: 105px;
+      }
       .elipse-bordered {
         position: absolute;
         width: 587px;
         height: 587px;
         top: 20px;
-        right: 0%;
+        right: 5%;
         border-radius: 50%;
         border: 1px solid #c5b2b2;
-        opacity: .5;
+        // opacity: .5;
         z-index: 2;
+        & h1 {
+          position: absolute;
+          line-height: 50px;
+          font-size: 36px;
+          font-weight: $mainFontWeight;
+          color: $mainFontColor;
+          text-transform: uppercase;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          span {
+            letter-spacing: 2px;
+            position: absolute;
+            top: 50%;
+            left: -20%;
+            transform: translate(-50%, -50%) rotate(90deg);
+            font-size: 13.5px;
+            opacity: .1;
+          }
+        }
       }
       .elipse-black {
         position: absolute;
@@ -94,15 +166,27 @@ ul, li {
         z-index: 1;
       }
       .elipse-bg {
-        position: absolute;
-        background: url(); // Add background covered
+        position: relative;
         top: -500px;
-        left: 20%;
+        left: 25%;
         width: 1300px;
         height: 1300px;
         border-radius: 50%;
         background: $white;
         z-index: 0;
+        &::before {
+          content: '';
+          position: absolute;
+          background-image: url(https://www.hugochaume.com/wp-content/uploads/2018/09/gdtography-310706-unsplash.jpg); 
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 100%;
+          width: 100%;
+        }
       }
   }
 }
